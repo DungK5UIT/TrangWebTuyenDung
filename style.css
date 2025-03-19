@@ -1,0 +1,478 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body
+{
+    width: 1700px;
+}
+.header-taskbar
+{
+    background-color:white;
+    display: flex;
+    flex-grow: row wrap;
+    padding: 5px;
+}
+.in 
+{
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.in span {
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.3); /* Màu đen với độ mờ 30% */
+    opacity: 0.3;
+    margin: -20px;
+}
+
+.in a
+{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.in a p 
+{
+    padding-left: 4px;
+    font-size: 20px;
+    color: black;
+}
+
+
+.in a button {
+    all: unset; /* Xóa hết các thuộc tính mặc định ảnh hưởng */
+    padding: 10px 15px; /* Tạo padding mới cho button */
+    background-color: #197BCD; /* Giữ màu nền */
+    color: white; /* Đặt màu chữ riêng */
+    border-radius: 10px; /* Làm mềm góc button */
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+}
+#dangky button {
+    background-color: white; /* Nền trắng */
+    color: #197BCD; /* Chữ màu xanh */
+    border: 1px solid #197BCD; /* Viền xanh */
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#dangky {
+    margin-left: -35px; /* Điều chỉnh khoảng cách giữa hai nút */
+}
+#tuyendung button
+{
+background-color: #001D35;
+}
+.header 
+{
+    background-image: url("./wallhaven-vgym88.jpg");
+    height: 500px;
+    width: 1720px;
+}
+.header-main  h2
+{
+    color: white;
+    padding-left: 10%;
+    margin-top: 30px;
+}
+        /* Tạo thanh nền chứa toàn bộ form */
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 500px; /* Điều chỉnh độ rộng */
+    gap: 10px; /* Tạo khoảng cách giữa các phần tử */
+    margin-left: 10%;
+    margin-top: 2%;
+    padding-left: 10px;
+    padding-right: 370px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Biểu tượng tìm kiếm và vị trí */
+.search-form i {
+    font-size: 18px;
+    color: #888;
+}
+
+/* Ô nhập liệu */
+.search-form input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    margin-left: -10px;
+}
+
+/* Dấu gạch phân cách */
+.search-form .divider {
+    font-size: 18px;
+    color: #888;
+    padding-left: 255px;
+}
+
+/* Dropdown chọn địa điểm */
+.search-form select {
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-left: -10px;
+}
+
+/* Nút tìm kiếm */
+.search-form button {
+    background-color: #197BCD;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex; /* Dùng flexbox để căn chỉnh */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa chữ */
+    white-space: nowrap; /* Đảm bảo chữ không bị xuống dòng */
+    padding: 10px;
+}
+
+
+.search-form button:hover {
+    background-color: #125A9E;
+}
+
+.list-group {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các mục */
+    list-style: none;
+    padding-left: 10%;
+    margin-top: 20px;
+}
+.list-group-item {
+    background: white; /* Nền trắng */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 7px 16px 7px 16px;
+}
+.list-group-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;    
+}
+.list-group-item img {
+    margin-right: 5px;
+}
+.CV {
+    display: flex;
+    gap: 30px; /* Giảm khoảng cách giữa hai khung */
+    padding-left: 10%;
+    margin-top: 2%;
+}
+
+.tailen, .taocv {
+    background: transparent; /* Làm nền trong suốt */
+    border: 1px solid #197BCD; /* Viền màu xanh */
+    color: white; /* Chữ màu trắng */
+    width: 26.4%; /* Thu nhỏ chiều rộng */
+    height: 140px; /* Thu nhỏ chiều dài */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.anh {
+    flex-shrink: 0;
+    margin-right: 10px; /* Giữ hình bên trái */
+}
+
+.noidung {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Căn nội dung sang trái */
+    margin-left: 5px;
+    gap: 7px;
+}
+
+.noidung h3 {
+    margin-bottom: 5px; /* Giảm khoảng cách giữa các phần tử */
+    font-size: 17px; /* Giảm kích thước chữ */
+}
+
+.noidung span {
+    font-size: 15px; /* Giảm kích thước chữ */
+    margin-bottom: 5px;
+}
+
+.btn-primary {
+    background-color: #197BCD; /* Nền xanh */
+    color: white; /* Chữ trắng */
+    border: none;
+    padding: 5px 10px;
+    font-size: 15px; /* Giảm kích thước chữ */
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+.noidung a {
+text-decoration: none;
+}
+.btn-primary:hover {
+    background-color: darkblue; /* Màu xanh đậm hơn khi hover */
+}
+
+.vieclam-body a
+{
+    background-color: white;
+    gap: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05); /* Bóng nhẹ hơn */
+    border-radius: 10px;
+}
+
+.d-flex.teks-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Bỏ gạch chân link */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.d-flex.teks-item:hover {
+    background-color: #f0f0f0; /* Hiệu ứng hover nhẹ */
+}
+
+.flex-shrink-0 img {
+    border-radius: 8px; /* Bo góc ảnh */
+    margin-right: 7px;
+}
+
+.flex-grow-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-grow-1 h3 {
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.flex-grow-1 .h6 {
+    font-weight: 400; /* Giảm độ đậm 1 nửa */
+    color: black;
+    opacity: 0.6; /* Làm chữ nhạt đi */
+}
+
+.flex-grow-1 ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    display: flex; /* Cho hai mục nằm cùng hàng */
+    gap: 10px; /* Khoảng cách giữa hai mục */
+}
+
+.flex-grow-1 ul li {
+    background-color: rgba(232, 243, 252, 1); /* Màu nền xanh nhạt */
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 0.43px solid rgba(141, 196, 241, 1) !important;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: 12px; /* Thu nhỏ kích thước */
+}
+
+.flex-grow-1 ul li i {
+    margin-right: 5px; /* Khoảng cách icon và chữ */
+    font-size: 14px; /* Nhỏ hơn */
+}
+
+.vieclam-body
+{
+    background: linear-gradient(180deg, #D2EDFF 0%, #FDFFF3 100%);
+    width: 100%;
+    padding-bottom: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.04);
+
+}
+.vieclam-body h2
+{
+    padding-left: 10%;
+    padding-top: 20px;
+}
+.tuyenvieclam {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột */
+    gap: 10px; /* Khoảng cách giữa các thẻ */
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.vieclam-body a {
+    font-size: 14px; /* Giảm kích thước chữ */
+    padding: 5px 10px; /* Giảm khoảng cách bên trong */
+    margin: 2px; /* Giảm khoảng cách giữa các thẻ */
+    display: inline-block; /* Đảm bảo giữ bố cục */
+}
+#goiy
+{
+    width: 80%;
+    background-color: white;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.nhatuyendung
+{
+    gap: 10px; /* Khoảng cách giữa các thẻ */
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chitiet {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 3 cột */
+    flex-wrap: nowrap;
+    gap: 10px; /* Khoảng cách giữa các thẻ */
+    overflow: hidden; /* Giữ nội dung không bị tràn */
+    white-space: nowrap;
+    justify-content: center;
+}
+
+.chitiet a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 120px; /* Điều chỉnh chiều rộng phù hợp */
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Ẩn phần nội dung tràn ra */
+    text-decoration: none;
+}
+
+.chitiet a .h5 {
+    font-size: 14px; /* Điều chỉnh kích thước chữ */
+    font-weight: bold;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Hiển thị "..." khi quá dài */
+    max-width: 100%; /* Giới hạn chiều rộng */
+    color: black;
+}
+.chitiet a span
+{
+    color: black;
+}
+
+
+.chitiet a:hover {
+    transform: scale(1.05);
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05); /* Bóng nhẹ hơn */
+
+}
+
+.prev:hover, .next:hover {
+    transform: translateY(-50%) scale(1.2); /* Phóng to 1.2 lần */
+    background-color: black;
+    color: white;
+}
+
+
+.prev {
+    left: 30px; /* Căn nút bên trái */
+}
+
+.next {
+    right: 30px; /* Căn nút bên phải */
+}
+
+.vieclamnoibat h2
+{
+    padding-left: 10%;
+    padding-top: 20px;
+}
+.vieclamnoibat {
+    background-color: #F8F9FA;
+}
+.viec {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột */
+    gap: 15px; /* Khoảng cách giữa các thẻ */
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.viec a
+{
+    background-color: white;
+    gap: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05); /* Bóng nhẹ hơn */
+    border-radius: 10px;
+}
+.banner-body
+{
+    background: url(./banner.webp);
+    background-size: cover;
+    height: 330px;
+    margin-top: 60px;
+ 
+}
+.banner-body h1
+{
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+    font-size: 40px;
+}
+.CV-banner {
+    display: flex;
+    gap: 30px; /* Giảm khoảng cách giữa hai khung */
+    justify-content: center;
+    margin-top: 36px;
+}
+.CV-banner .tailen, .CV-banner .taocv {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgb(0, 0, 0, 0.2); /* Nền trắng nhưng hơi đục */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+

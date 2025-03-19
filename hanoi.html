@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuyển Dụng</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header">
+            <div class="header-taskbar">
+                <div class="header-taskbar in">
+                    <h2>TalentHub</h2>
+                    <a href="#"><img src="https://media.jobsgo.vn/img/job.svg" alt="job" loading="lazy"><p>Việc làm</p></a>
+                    <a href="#"><img src="https://media.jobsgo.vn/img/employer.svg" alt="job" loading="lazy"><p>Công Ty</p></a>
+                    <a href="#"><img src="https://media.jobsgo.vn/img/cv.svg" alt="job" loading="lazy"><p>CV/Hồ sơ</p></a>
+                    <a href="#"><img src="https://media.jobsgo.vn/img/career.svg" alt="job" loading="lazy"> <p>Phát triển sự nghiệp</p></a>
+                    <a href="#" id="dangnhap"> <button> Đăng Nhập</button></a>
+                    <a href="#" id="dangky"> <button> Đăng Ký</button></a>
+                    <span class="divider">|</span>
+                    <a href="#" id="tuyendung"> <button> Đăng Tuyển & tìm hồ sơ</button></a>
+                </div>
+            </div>
+            <div class="header-main">
+                    <h2>Tìm việc làm nhanh 24h, việc làm mới nhất trên toàn quốc</h2>
+                    <form class="search-form">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="Việc, công ty, ngành nghề...">
+                        <span class="divider">|</span>
+                        <i class="fa fa-map-marker-alt"></i>
+                        <select>
+                            <option>Hà Nội</option>
+                            <option>Thành Phố Hồ Chí Minh</option>
+                            <option>Đà Nẵng</option>
+                        </select>
+                        <button type="submit">Tìm kiếm</button>
+                    </form>
+                    <!-- Thêm FontAwesome để có icon tìm kiếm & địa điểm -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a title="Việc làm Kinh Doanh" href="/viec-lam-kinh-doanh-ban-hang.html" class="list-group-item-action"><img height="15" width="15" loading="lazy" src="https://media.jobsgo.vn/teks/img/ic-kinh-doanh.svg?v=2342081531032" alt="Việc làm Kinh Doanh"> Kinh Doanh</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a title="Việc làm Kế Toán" href="/viec-lam-ke-toan-kiem-toan.html" class="list-group-item-action"><img height="15" width="15" loading="lazy" src="https://media.jobsgo.vn/teks/img/ic-ke-toan.svg?v=2342081531032" alt="Việc làm Kế Toán"> Kế Toán</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a title="Việc làm IT Phần Mềm" href="/viec-lam-it-phan-mem.html" class="list-group-item-action"><img height="15" width="15" loading="lazy" src="https://media.jobsgo.vn/teks/img/ic-cong-nghe-thong-tin.svg?v=2342081531032" alt="Việc làm Việc làm IT Phần Mềm"> IT Phần Mềm</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a title="Việc làm Điện/Điện Tử/Điện Lạnh" href="/viec-lam-dien-dien-tu-dien-lanh.html" class="list-group-item-action"><img height="15" width="15" loading="lazy" src="https://media.jobsgo.vn/teks/img/ic-ky-thuat.svg?v=2342081531032" alt="Việc làm Điện/Điện Tử/Điện Lạnh"> Điện/Điện Tử</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a title="Việc làm Nhân Sự" href="/viec-lam-nhan-su.html" class="list-group-item-action"><img height="15" width="15" loading="lazy" src="https://media.jobsgo.vn/teks/img/ic-nhan-su.svg?v=2342081531032" alt="Việc làm Nhân Sự"> Nhân Sự</a>
+                        </li>
+                    </ul>
+                    <div class="CV">
+                        <div class="tailen">
+                                    <div class="anh">
+                                        <img height="90" width="90" loading="lazy" src="https://media.jobsgo.vn/img/2024/ic1.svg?v=2342081531032" alt="Đánh giá CV - JobsGO AI">
+                                    </div>
+                                        <div class="noidung">
+                                            <h3 class="fs-6 card-title fw-bold">Đánh giá CV - TalentHub AI</h3>
+                                            <span class="card-text small">Bạn đã có sẵn CV? Tải lên để nhận phân tích và gợi ý của TalentHub AI</span>
+                                            <a href="#" class="btn btn-primary btn-sm"> Tải lên CV</a>
+                                        </div>
+                        </div>                  
+
+                        <div class="taocv">
+                                            <div class="anh">
+                                                <img height="90" width="90" loading="lazy" src="https://media.jobsgo.vn/img/2024/ic2.svg?v=2342081531032" alt="Tạo CV Online - JobsGO AI">
+                                            </div>
+                                                <div class="noidung">
+                                                    <h3 class="fs-6 card-title fw-bold">Tạo CV tự động trong 2 phút</h3>
+                                                    <span class="card-text small">Tạo CV xin việc Online chuẩn, đẹp miễn phí với TalentHub</span>
+                                                    <a href="#" class="btn btn-primary btn-sm">Tạo CV 2 phút</a>
+                                                    </div>     
+                        </div>
+                    </div>              
+
+            </div>
+            
+      
+    </div>
+    <div class="vieclam-body">
+        <h2>Việc làm tốt nhất</h2>
+        <div id="goiy" class="alert d-none d-sm-block alert-light alert-dismissible rounded-1 text-dark py-1 px-2 small shadow-sm">
+            <img src="https://media.jobsgo.vn/img/2024/ic6.svg?v=2342081531032" width="16" loading="lazy" alt="jobsgo"> 
+            <strong>Gợi ý:</strong> Di chuột vào tiêu đề việc làm để xem thông tin chi tiết.
+        </div>
+        <div class="tuyenvieclam">
+            <a href="/viec-lam/ky-su-thiet-ke-dau-thau-phan-co-ha-noi-20041300416.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/91566-200x200.jpg?v=1720755262" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1473436 h5 text-danger tooltip tooltipstered">Kỹ Sư Thiết Kế Đấu Thầu - Phần Cơ [Hà Nội]</h3>
+                  <div class="h6 text-muted">Công Ty Cổ Phần Kỹ Thuật Jesco Peico</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 15 - 23 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+            </a>
+            <a href="/viec-lam/chuyen-vien-truyen-thong-20259732210.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/96145-200x200.jpg?v=1741576802" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1489522 h5 tooltip tooltipstered">Chuyên Viên Truyền Thông</h3>
+                  <div class="h6 text-muted">Công Ty TNHH Scbio</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 10 - 15 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/nhan-vien-tu-van-du-lich-cao-cap-khong-yeu-cau-kinh-nghiem-thu-nhap-10tr-50tr-20381304997.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/77584-200x200.jpg?v=1741852361" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1498475 h5 tooltip tooltipstered">Nhân Viên Tư Vấn Du Lịch Cao Cấp Không Yêu Cầu Kinh Nghiệm Thu Nhập 10TR -  50TR</h3>
+                  <div class="h6 text-muted">Công Ty TNHH Vietnam Stay Travel And Services</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 10 - 50 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/nhan-vien-ban-hang-charleskeith-vincom-times-city-20347208128.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/23103-200x200.jpg?v=1719562317" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1495964 h5 tooltip tooltipstered">Nhân Viên Bán Hàng (Charles&amp;Keith Vincom Times City)</h3>
+                  <div class="h6 text-muted">Công Ty Cổ Phần Maison Retail Management International - Hà Nội
+</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 6 - 10 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+
+              <a href="/viec-lam/chuyen-vien-kinh-doanh-thu-nhap-18-36-trieu-ha-noi-19859015920.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/165343-200x200.jpg?v=1709958686" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1460012 h5 text-danger tooltip tooltipstered">Chuyên Viên Kinh Doanh - Thu Nhập 18 - 36 Triệu - [Hà Nội]</h3>
+                  <div class="h6 text-muted">Công Ty TNHH Bảo Hiểm Nhân Thọ Sun Life Việt Nam</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 18 - 36 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/chuyen-vien-kinh-doanh-thu-nhap-tu-8-25-trieu-nghi-thu-7-chu-nhat-di-lam-ngay-hn-20346271177.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/8836-200x200.jpg?v=1739950527" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1495895 h5 text-danger tooltip tooltipstered">Chuyên Viên Kinh Doanh Thu Nhập Từ 8 - 25 Triệu Nghỉ Thứ 7 Chủ Nhật - Đi Làm Ngay [HN]</h3>
+                  <div class="h6 text-muted">Công Ty Cổ Phần JobsGO</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 8 - 25 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/nhan-vien-phap-ly-lam-viec-tu-thu-2-thu-6-20150081785.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/268870-200x200.jpg?v=1740724740" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1481447 h5 text-danger tooltip tooltipstered">Nhân Viên Pháp Lý (Làm Việc Từ Thứ 2 - Thứ 6)</h3>
+                  <div class="h6 text-muted">Công Ty Trách Nhiệm Hữu Hạn Solid Immigration Consulting </div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> Thỏa thuận</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/nhan-vien-thiet-ke-20236742963.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/94279-200x200.jpg?v=1735124993" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1487829 h5 text-danger tooltip tooltipstered">Nhân Viên Thiết Kế</h3>
+                  <div class="h6 text-muted">Công Ty Cổ Phần Đầu Tư Vàng Phú Quý</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> Thỏa thuận</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/nhan-vien-kinh-doanh-chua-co-kn-duoc-dao-tao-nam-tu-liem-ha-noi-19838063523.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/3960-200x200.jpg?v=1720859526" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1458469 h5 tooltip tooltipstered">Nhân Viên Kinh Doanh (Chưa Có KN Được Đào Tạo) [Nam Từ Liêm, Hà Nội]</h3>
+                  <div class="h6 text-muted">Công Ty TNHH AT Đông Dương</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 10 - 15 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/nhan-vien-kinh-doanh-van-tai-quoc-te-thu-nhap-12-den-50-trieu-19954177552.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/188472-200x200.jpg?v=1717125622" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1467020 h5 tooltip tooltipstered">Nhân Viên Kinh Doanh Vận Tải Quốc Tế - Thu Nhập 12 Đến 50 Triệu</h3>
+                  <div class="h6 text-muted">Công Ty TNHH Sos Express Việt Nam</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 12 - 50 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/nhan-vien-telesale-thiet-bi-y-te-thu-nhap-tu-7-20trieu-20399568752.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/165597-200x200.jpg?v=1739176715" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1499820 h5 tooltip tooltipstered">Nhân Viên Telesale (Thiết Bị Y Tế - Thu Nhập Từ 7 - 20Triệu)</h3>
+                  <div class="h6 text-muted">Công Ty TNHH Sản Xuất - Thương Mại - Dịch Vụ Dmax </div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 7 - 20 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/nhan-vien-marketing-online-20409101210.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/16386-200x200.jpg?v=1734403125" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1500522 h5 text-danger tooltip tooltipstered">Nhân Viên Marketing Online</h3>
+                  <div class="h6 text-muted">Công ty TNHH dược phẩm Khang Linh</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 10 - 15 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/nhan-vien-kinh-doanh-hoach-dinh-tai-chinh-20317442960.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/178850-200x200.jpg?v=1715219093" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1493772 h5 text-danger tooltip tooltipstered">Nhân Viên Kinh Doanh/ Hoạch Định Tài Chính</h3>
+                  <div class="h6 text-muted">De La Sól By SunLife Vietnam</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 18 - 33 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/chuyen-vien-tu-van-khoa-hoc-khong-yeu-cau-kinh-nghiem-20229355987.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/26878-200x200.jpg?v=1561431192" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1487285 h5 tooltip tooltipstered">Chuyên Viên Tư Vấn Khoá Học (Không Yêu Cầu Kinh Nghiệm)</h3>
+                  <div class="h6 text-muted">Trí Việt Education Group - Công ty Cổ phần Tập đoàn Giáo dục Trí Việt</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 6 - 15 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/nhan-vien-kinh-doanh-di-lam-ngay-tong-thu-nhap-15-40-tr-thanh-xuan-ha-noi-20247307425.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/117511-200x200.jpg?v=1741343149" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1488607 h5 text-danger tooltip tooltipstered">Nhân Viên Kinh Doanh - Đi Làm Ngay - Tổng Thu Nhập 15 - 40 TR - Thanh Xuân, Hà Nội</h3>
+                  <div class="h6 text-muted">Công Ty TNHH Thương Mại Và Dịch Vụ Thượng Mỹ</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 15 - 40 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/quan-ly-du-an-20168576383.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/57771-200x200.jpg?v=1615544508" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1482809 h5 tooltip tooltipstered">Quản Lý Dự Án</h3>
+                  <div class="h6 text-muted">Công ty Cổ phần CompA Design</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 18 - 25 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/nhan-vien-thiet-ke-noi-that-thu-nhap-12-40-trieu-dong-cau-giay-ha-noi-20324938568.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/267092-200x200.jpg?v=1741604882" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1494324 h5 text-danger tooltip tooltipstered">Nhân Viên Thiết Kế Nội Thất - Thu Nhập 12 - 40 Triệu Đồng - Cầu Giấy, Hà Nội</h3>
+                  <div class="h6 text-muted">Công Ty Cổ Phần Nội Thất Chân Tâm</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 12 - 40 triệu VNĐ</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+              <a href="/viec-lam/tro-ly-kinh-doanh-biet-tieng-trung-uu-tien-nam-ha-dong-ha-noi-20259650736.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+                <div class="flex-shrink-0 position-relative">
+                                                                                          <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/63914-200x200.jpg?v=1741576600" alt="">
+                </div>
+
+                                      
+                <div class="flex-grow-1 ms-2">
+                  <h3 class="tooltip_job_1489516 h5 text-danger tooltip tooltipstered">Trợ Lý Kinh Doanh Biết Tiếng Trung - Ưu Tiên Nam - Hà Đông, Hà Nội</h3>
+                  <div class="h6 text-muted">Công Ty TNHH Đầu Tư Và Thương Mại VTV</div>
+                  <ul class="p-0">
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> Thỏa thuận</li>
+                        <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                  </ul>
+                </div>
+              </a>
+        </div>
+          
+        <h2>Nhà tuyển dụng tiêu biểu</h2>
+
+        <div class="nhatuyendung">
+            <div class="chitiet">
+              
+                        <a href="/tuyen-dung/cong-ty-tnhh-cong-nghe-vooc-934357411.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/66341-200x200.jpg?v=1625567586" alt="Công Ty TNHH Công Nghệ VOOC">
+                <div class="h5 fw-bold text-dark">Công Ty TNHH Công Nghệ VOOC</div>
+                <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Đà Nẵng</span></p>
+                        </a>
+                        <a href="/tuyen-dung/cong-ty-tnhh-manulife-vn-1209644478.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/86614-200x200.jpg?v=1735268202" alt="Công Ty TNHH Manulife VN">
+                <div class="h5 fw-bold text-dark">Công Ty TNHH Manulife VN</div>
+                <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Hồ Chí Minh</span></p>
+                        </a>
+                        <a href="/tuyen-dung/trung-tam-tiec-cuoi-hoi-nghi-melisa-center-94686367.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/4505-200x200.jpg?v=1607915175" alt="Trung tâm Tiệc cưới Hội nghị Melisa Center">
+                <div class="h5 fw-bold text-dark">Trung tâm Tiệc cưới Hội nghị Melisa Center</div>
+                <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Hồ Chí Minh</span></p>
+                        </a>
+                        <a href="/tuyen-dung/ngan-hang-tmcp-viet-nam-thinh-vuong-vpbank-35074557.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/115-200x200.jpg?v=1685092426" alt="Ngân Hàng TMCP Việt Nam Thịnh Vượng VPBank">
+                <div class="h5 fw-bold text-dark">Ngân Hàng TMCP Việt Nam Thịnh Vượng VPBank</div>
+                <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Hà Nội</span></p>
+                        </a>
+                        <a href="/tuyen-dung/cong-ty-tnhh-phan-mem-phuong-chi-39161836.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/416-200x200.jpg?v=1726729409" alt="Công Ty TNHH Phần Mềm Phương Chi">
+                <div class="h5 fw-bold text-dark">Công Ty TNHH Phần Mềm Phương Chi</div>
+                <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Hà Nội</span></p>
+                        </a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSepwXsGV5oOiewzOCU-Pf0CZVmPa02XBX0p5UL0NDOYXt1BFw/viewform" class="d-block border-0 p-0 text-center teks-item text-dark">
+                <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/5442-200x200.jpg?v=1713512512" alt="Công Ty Cổ Phần Vinhomes">
+                <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Vinhomes</div>
+                <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Hà Nội</span></p>
+                        </a>
+                        <a href="/tuyen-dung/chi-nhanh-cong-ty-tnhh-transcosmos-viet-nam-tai-thanh-pho-ho-chi-minh-1072659526.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/76526-200x200.jpg?v=1705050837" alt="Chi Nhánh Công Ty TNHH transcosmos Việt Nam Tại Thành Phố Hồ Chí Minh">
+                <div class="h5 fw-bold text-dark">Chi Nhánh Công Ty TNHH transcosmos Việt Nam Tại Thành Phố Hồ Chí Minh</div>
+                <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Hồ Chí Minh</span></p>
+                        </a>
+                        <a href="/tuyen-dung/bellsystem24-viet-nam-448894582.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/30590-200x200.jpg?v=1680852959" alt="BELLSYSTEM24 VIỆT NAM">
+                <div class="h5 fw-bold text-dark">BELLSYSTEM24 VIỆT NAM</div>
+                <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Hồ Chí Minh</span></p>
+                        </a>
+                          <a href="/tuyen-dung/cong-ty-co-phan-dau-tu-quang-cao-song-hanh-ha-noi-1265196167.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                  <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/90705-200x200.jpg?v=1661141314" alt="Công Ty Cổ Phần Đầu Tư Quảng Cáo Song Hành Hà Nội">
+                  <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Đầu Tư Quảng Cáo Song Hành Hà Nội</div>
+                  <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Hà Nội</span></p>
+                          </a>
+                          <a href="/tuyen-dung/cong-ty-co-phan-dich-vu-quan-ly-tai-san-cat-tuong-626440007.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                  <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/43665-200x200.jpg?v=1726623901" alt="Công Ty Cổ Phần Dịch Vụ Quản Lý Tài Sản Cát Tường">
+                  <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Dịch Vụ Quản Lý Tài Sản Cát Tường</div>
+                  <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Hồ Chí Minh</span></p>
+                          </a>
+                          <a href="/tuyen-dung/trung-tam-tieng-anh-ila-viet-nam-35726349.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                  <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/163-200x200.jpg?v=1704870345" alt="Trung Tâm Tiếng Anh ILA Việt Nam">
+                  <div class="h5 fw-bold text-dark">Trung Tâm Tiếng Anh ILA Việt Nam</div>
+                  <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Hồ Chí Minh</span></p>
+                          </a>
+                          <a href="/tuyen-dung/cong-ty-co-phan-tap-doan-dia-oc-cat-tuong-59394546.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                  <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/1906-200x200.jpg?v=1671251061" alt="Công ty Cổ phần Tập đoàn Địa ốc Cát Tường">
+                  <div class="h5 fw-bold text-dark">Công ty Cổ phần Tập đoàn Địa ốc Cát Tường</div>
+                  <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Long An</span></p>
+                           </a>
+                          <a href="/tuyen-dung/cong-ty-co-phan-abaha-toan-cau-2116572309.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                  <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/153403-200x200.jpg?v=1709721603" alt="Công Ty Cổ Phần ABAHA Toàn Cầu">
+                  <div class="h5 fw-bold text-dark">Công Ty Cổ Phần ABAHA Toàn Cầu</div>
+                  <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>N/A</span></p>
+                          </a>
+                          <a href="/tuyen-dung/cong-ty-co-phan-dau-tu-va-phat-trien-bat-dong-san-khai-hung-447034259.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                  <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/30453-200x200.jpg?v=1601868555" alt="Công Ty Cổ Phần Đầu Tư Và Phát Triển Bất Động Sản Khải Hưng">
+                  <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Đầu Tư Và Phát Triển Bất Động Sản Khải Hưng</div>
+                  <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Hồ Chí Minh</span></p>
+                          </a>
+                          <a href="/tuyen-dung/cong-ty-bao-hiem-nhan-tho-manulife-tower-624498210.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                  <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/43522-200x200.jpg?v=1691053545" alt="Công Ty Bảo Hiểm Nhân Thọ Manulife Tower">
+                  <div class="h5 fw-bold text-dark">Công Ty Bảo Hiểm Nhân Thọ Manulife Tower</div>
+                  <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Hà Nội</span></p>
+                          </a>
+                          <a href="/tuyen-dung/pho-24-192400851.html" class="d-block border-0 p-0 text-center teks-item text-dark">
+                  <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/11701-200x200.jpg?v=1719977905" alt="Phở 24">
+                  <div class="h5 fw-bold text-dark">Phở 24</div>
+                  <p class="small text-nowrap d-none"> <i class="bx bx-map"></i> <span>Hồ Chí Minh</span></p>
+                          </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="vieclamnoibat">
+      <h2>Việc làm nổi bật</h2>
+      <div class="viec">
+          <a href="/viec-lam/thu-ky-kiem-tro-ly-nu-can-tho-20169879967.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/269989-200x200.jpg?v=1740129455" alt="">
+              </div>
+      
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1482905 h5 tooltip tooltipstered">Thư Ký Kiêm Trợ Lý - Nữ (Cần Thơ)</h3>
+                <div class="h6 text-muted">Công Ty TNHH Truyền Thông Quốc Tế Anh Ba Phải</div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> Thỏa thuận</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Cần Thơ</li>
+                </ul>
+              </div>
+            </a>
+            <a href="/viec-lam/cham-soc-khach-hang-ung-dung-du-lich-tieng-anh-q9-q12-19974573210.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                            <span title="NTD tương tác thường xuyên trong 24 giờ qua" class="position-absolute" style="top: -6px; left: -6px;"> <i class="text-light bx-xs fs-5 bx bx-bolt-circle bg-warning rounded-5"></i> </span>
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/250113-200x200.jpg?v=1728030489" alt="">
+              </div>
+  
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1468522 h5 text-danger tooltip tooltipstered">Chăm Sóc Khách Hàng Ứng Dụng Du Lịch (Tiếng Anh) - Q9, Q12</h3>
+                <div class="h6 text-muted">Công Ty TNHH Tư Vấn Giải Pháp Doanh Nghiệp Tpc</div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 9 - 13 triệu VNĐ</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hồ Chí Minh</li>
+                </ul>
+              </div>
+            </a>
+
+            <a href="/viec-lam/nhan-vien-kinh-doanh-duoc-my-pham-di-lam-ngay-20408788893.html?utm_source=home__featured" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/36253-200x200.jpg?v=1742022495" alt="">
+              </div>
+
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1500499 h5 tooltip tooltipstered">Nhân Viên Kinh Doanh Dược Mỹ Phẩm (Đi Làm Ngay)</h3>
+                <div class="h6 text-muted">Công Ty Cổ Phần Dược Phẩm Sakae</div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 8 - 15 triệu VNĐ</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hồ Chí Minh</li>
+                </ul>
+              </div>
+            </a>
+            <a href="/viec-lam/physiotherapist-doctor-bac-si-vat-ly-tri-lieu-19739995985.html?utm_source=home__featured" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/189991-200x200.jpg?v=1736914909" alt="">
+              </div>
+
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1451247 h5 text-danger tooltip tooltipstered">Physiotherapist Doctor - Bác Sĩ Vật Lý Trị Liệu</h3>
+                <div class="h6 text-muted">Công Ty TNHH Lá Phong Quốc Tế</div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> Thỏa thuận</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hồ Chí Minh</li>
+                </ul>
+              </div>
+            </a>
+            <a href="/viec-lam/nhan-vien-cham-soc-khach-hang-19714589676.html?utm_source=home__featured" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/76526-200x200.jpg?v=1705050837" alt="">
+              </div>
+
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1449376 h5 text-danger tooltip tooltipstered">Nhân Viên Chăm Sóc Khách Hàng</h3>
+                <div class="h6 text-muted">Chi Nhánh Công Ty TNHH transcosmos Việt Nam Tại Thành Phố Hồ Chí Minh</div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> Thỏa thuận</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hồ Chí Minh</li>
+                </ul>
+              </div>
+            </a>
+            <a href="/viec-lam/shop-leader-truong-cua-hang-thu-nhap-9-12m-thuong-tai-ho-chi-minh-19991234643.html?utm_source=home__featured" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/5141-200x200.jpg?v=1659433894" alt="">
+              </div>
+
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1469749 h5 tooltip tooltipstered">Shop Leader/ Trưởng Cửa Hàng (Thu Nhập 9 - 12M + Thưởng) - Tại Hồ Chí Minh</h3>
+                <div class="h6 text-muted">Công Ty TNHH Saint Honore Đầu Tư Và Thương Mại</div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 9 - 12 triệu VNĐ</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hồ Chí Minh</li>
+                </ul>
+              </div>
+            </a>
+            <a href="/viec-lam/nhan-vien-sales-tu-van-ban-hang-lam-viec-tai-tan-binh-thu-nhap-tren-10-trieu-20366300202.html?utm_source=home__featured" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/84161-200x200.jpg?v=1645781902" alt="">
+              </div>
+
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1497370 h5 tooltip tooltipstered">Nhân Viên Sales /Tư Vấn/Bán Hàng - Làm Việc Tại Tân Bình - Thu Nhập Trên 10 Triệu</h3>
+                <div class="h6 text-muted">Công Ty TNHH Marketing Buff</div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> Thỏa thuận</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hồ Chí Minh</li>
+                </ul>
+              </div>
+            </a>
+            <a href="/viec-lam/ke-toan-thue-tong-hop-20380626047.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/107224-200x200.jpg?v=1725597068" alt="">
+              </div>
+
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1498425 h5 tooltip tooltipstered">Kế Toán Thuế - Tổng Hợp</h3>
+                <div class="h6 text-muted">Công Ty TNHH Xây Dựng Trang Trí Nội Thất Khang Điền</div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 12 - 16 triệu VNĐ</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hồ Chí Minh</li>
+                </ul>
+              </div>
+            </a>
+            <a href="/viec-lam/quan-ly-kinh-doanh-phat-trien-kinh-doanh-20142450387.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/178850-200x200.jpg?v=1715219093" alt="">
+              </div>
+
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1480885 h5 text-danger tooltip tooltipstered">Quản Lý Kinh Doanh / Phát Triển Kinh Doanh</h3>
+                <div class="h6 text-muted">De La Sól By SunLife Vietnam</div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> Từ 35 triệu VNĐ</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                </ul>
+              </div>
+            </a>
+            <a href="/viec-lam/nhan-vien-tu-van-tour-hanh-huong-20116120706.html?utm_source=home__featured" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/8132-200x200.jpg?v=1706673260" alt="">
+              </div>
+
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1478946 h5 tooltip tooltipstered">Nhân Viên Tư Vấn Tour Hành Hương</h3>
+                <div class="h6 text-muted">Công Ty TNHH Du Lịch Trần Việt</div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> Thỏa thuận</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                </ul>
+              </div>
+            </a>
+            <a href="/viec-lam/can-bo-ky-thuat-hien-truong-ky-su-xay-dung-luong-12-20tr-mien-bac-20150353365.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/60306-200x200.jpg?v=1740710469" alt="">
+              </div>
+
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1481467 h5 text-danger tooltip tooltipstered">Cán Bộ Kỹ Thuật Hiện Trường (Kỹ Sư Xây Dựng) - Lương 12 - 20TR - Miền Bắc</h3>
+                <div class="h6 text-muted">Công Ty TNHH Dự Ứng Lực Minh Đức</div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 12 - 20 triệu VNĐ</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Miền Bắc</li>
+                </ul>
+              </div>
+            </a>
+            <a href="/viec-lam/nhan-vien-kinh-doanh-chuyen-vien-tu-van-tai-chinh-kenh-ngan-hang-vpbank-vpbank-ha-noi-20098617375.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/155623-200x200.jpg?v=1717560343" alt="">
+              </div>
+
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1477657 h5 text-danger tooltip tooltipstered">Nhân Viên Kinh Doanh - Chuyên Viên Tư Vấn Tài Chính Kênh Ngân Hàng Vpbank - [Vpbank - Hà Nội]</h3>
+                <div class="h6 text-muted"> Công Ty TNHH Bảo Hiểm Nhân Thọ AIA (Việt Nam) </div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 8 - 40 triệu VNĐ</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                </ul>
+              </div>
+            </a>
+            <a href="/viec-lam/giam-sat-thi-cong-noi-that-20232737158.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/61046-200x200.jpg?v=1700205704" alt="">
+              </div>
+
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1487534 h5 text-danger tooltip tooltipstered">Giám Sát Thi Công Nội Thất</h3>
+                <div class="h6 text-muted">Công Ty TNHH Thương Mại Dịch Vụ Zunik</div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> Thỏa thuận</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hồ Chí Minh</li>
+                </ul>
+              </div>
+            </a>
+            <a href="/viec-lam/nhan-vien-kinh-doanh-van-tai-quoc-te-thu-nhap-12-den-50-trieu-19954177552.html?utm_source=home__hot" class="d-flex teks-item text-dark ">
+              <div class="flex-shrink-0 position-relative">
+                                                                                        <img width="80" height="80" onerror="this.src='/img/employer-logo.jpg'" loading="lazy" src="https://media.jobsgo.vn/media/img/employer/188472-200x200.jpg?v=1717125622" alt="">
+              </div>
+
+                                    
+              <div class="flex-grow-1 ms-2">
+                <h3 class="tooltip_job_1467020 h5 tooltip tooltipstered">Nhân Viên Kinh Doanh Vận Tải Quốc Tế - Thu Nhập 12 Đến 50 Triệu</h3>
+                <div class="h6 text-muted">Công Ty TNHH Sos Express Việt Nam</div>
+                <ul class="p-0">
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-money-no"></i> 12 - 50 triệu VNĐ</li>
+                      <li class="list-group-item list-group-item-action"><i class="bx bx-map-no"></i> Hà Nội</li>
+                </ul>
+              </div>
+            </a>
+        </div>
+
+        
+    </div>
+
+    <div class="banner-body">
+      <h1>Cùng TalentHub xây dựng hồ sơ ấn tượng</h1>
+      <div class="CV-banner">
+        <div class="tailen">
+                    <div class="anh">
+                        <img height="90" width="90" loading="lazy" src="https://media.jobsgo.vn/img/2024/ic1.svg?v=2342081531032" alt="Đánh giá CV - JobsGO AI">
+                    </div>
+                        <div class="noidung">
+                            <h3 class="fs-6 card-title fw-bold">Đánh giá CV - TalentHub AI</h3>
+                            <span class="card-text small">Bạn đã có sẵn CV? Tải lên để nhận phân tích và gợi ý của TalentHub AI</span>
+                            <a href="#" class="btn btn-primary btn-sm"> Tải lên CV</a>
+                        </div>
+        </div>                  
+
+        <div class="taocv">
+                            <div class="anh">
+                                <img height="90" width="90" loading="lazy" src="https://media.jobsgo.vn/img/2024/ic2.svg?v=2342081531032" alt="Tạo CV Online - JobsGO AI">
+                            </div>
+                                <div class="noidung">
+                                    <h3 class="fs-6 card-title fw-bold">Tạo CV tự động trong 2 phút</h3>
+                                    <span class="card-text small">Tạo CV xin việc Online chuẩn, đẹp miễn phí với TalentHub</span>
+                                    <a href="#" class="btn btn-primary btn-sm">Tạo CV 2 phút</a>
+                                    </div>     
+        </div>
+    </div>   
+    </div>
+
+</body>
+<script src="./script.js"></script>
+</html>
