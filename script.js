@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Chuyển hướng đến trang tương ứng
         if (selectedLocation === "Thành Phố Hồ Chí Minh") {
-            window.location.href = "hochiminh.html";
+            window.location.href = "index.html";
         } else if (selectedLocation === "Đà Nẵng") {
             window.location.href = "danang.html";
         }
