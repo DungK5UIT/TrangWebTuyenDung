@@ -1,74 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đánh giá CV bởi TalenHub AI</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Upload CV</title>
+    <link rel="stylesheet" href="/tailencv/tailencv.css" />
 </head>
 <body>
 
-    <div class="header-taskbar out">
-        <div class="header-taskbar in">
-            <h2>TalentHub</h2>
-            <a href="#"><img src="https://media.jobsgo.vn/img/job.svg" alt="job" loading="lazy"><p>Việc làm</p></a>
-            <a href="#"><img src="https://media.jobsgo.vn/img/employer.svg" alt="job" loading="lazy"><p>Công Ty</p></a>
-            <a href="#"><img src="https://media.jobsgo.vn/img/cv.svg" alt="job" loading="lazy"><p>CV/Hồ sơ</p></a>
-            <a href="#"><img src="https://media.jobsgo.vn/img/career.svg" alt="job" loading="lazy"> <p>Phát triển sự nghiệp</p></a>
-            <a href="#" id="dangnhap"> <button> Đăng Nhập</button></a>
-            <a href="#" id="dangky"> <button> Đăng Ký</button></a>
+
+                <div class="header-taskbar in">
+                 <a href="/index.html"> <h2>TalentHub</h2></a>  
+                    <a href="#"><img src="https://media.jobsgo.vn/img/job.svg" alt="job" loading="lazy"><p>Việc làm</p></a>
+                    <a href="#"><img src="https://media.jobsgo.vn/img/employer.svg" alt="job" loading="lazy"><p>Công Ty</p></a>
+                    <a href="#"><img src="https://media.jobsgo.vn/img/cv.svg" alt="job" loading="lazy"><p>CV/Hồ sơ</p></a>
+                    <a href="#"><img src="https://media.jobsgo.vn/img/career.svg" alt="job" loading="lazy"> <p>Phát triển sự nghiệp</p></a>
+                    <a href="/dangnhap.html" id="dangnhap"> <button> Đăng Nhập</button></a>
+                    <a href="#" id="dangky"> <button> Đăng Ký</button></a>
+                    <span class="divider">|</span>
+                    <a href="/tuyendung.html" id="tuyendung"> <button> Đăng Tuyển & tìm hồ sơ</button></a>
+                </div>
+    <div class="upload-container">
+        <div class="header">
+            <h1>📄 Upload CV của bạn</h1>
+            <p>Tải lên hồ sơ để ứng tuyển vào các vị trí phù hợp</p>
+        </div>
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">
+                <span>📁</span>
+            </div>
+            <div class="upload-text">
+                <h3>Kéo thả CV vào đây</h3>
+                <p>hoặc nhấn vào nút bên dưới để chọn file từ máy tính</p>
+            </div>
+            <input type="file" id="fileInput" class="file-input" accept=".pdf,.doc,.docx" multiple />
+            <button class="browse-btn" onclick="document.getElementById('fileInput').click()">
+                🔍 Chọn File
+            </button>
+        </div>
+        <div class="file-info" id="fileInfo">
+            <div id="fileList"></div>
+        </div>
+        <button class="upload-btn" id="uploadBtn">
+            🚀 Tải lên CV
+        </button>
+        <div class="progress-bar" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="supported-formats">
+            <p>Định dạng file được hỗ trợ:</p>
+            <div class="format-tags">
+                <span class="format-tag">PDF</span>
+                <span class="format-tag">DOC</span>
+                <span class="format-tag">DOCX</span>
+            </div>
         </div>
     </div>
 
-    <div class="danhgiacv">
-        <h2> Đánh giá CV bởi TalenHub AI</h2>
-        
-        <div class="carousel-container">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="image-container">
-                        <img src="./9540567_4165380.svg" class="adjusted-img" alt="">
-                        <div class="adjusted-caption">
-                            <h3>Kiểm tra nội dung CV</h3>
-                            <p>Công cụ sẽ xem xét các phần như tiêu đề, mục tiêu nghề nghiệp, kinh nghiệm làm việc, học vấn và kỹ năng.</p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="item">
-                    <div class="image-container">
-                        <img src="./9544565_4192365.svg" class="adjusted-img" alt="">
-                        <div class="adjusted-caption">
-                            <h3>Đánh giá cấu trúc CV</h3>
-                            <p>Công cụ sẽ xem xét việc sắp xếp các phần, sử dụng định dạng và khoảng trắng để tạo sự trình bày hợp lý.</p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="item">
-                    <div class="image-container">
-                        <img src="./9713610_4203237.svg" class="adjusted-img" alt="">
-                        <div class="adjusted-caption">
-                            <h3>Kiểm tra định dạng CV</h3>
-                            <p>Công cụ sẽ xem xét việc sử dụng font chữ, kích thước, màu sắc.. để tạo sự chuyên nghiệp và hấp dẫn.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-        
-            <div class="carousel-indicators">
-                <button type="button" class="carousel-indicator active" data-index="0"></button>
-                <button type="button" class="carousel-indicator" data-index="1"></button>
-                <button type="button" class="carousel-indicator" data-index="2"></button>
-            </div>
-        </div>
-
-        <span>Tải lên CV của bạn *</span> 
-
-        <input type="text" placeholder="">
-    </div>
-
-    <script src="./script.js" ></script>
+    <script src="/tailencv/tailencv.js"></script>
 </body>
 </html>

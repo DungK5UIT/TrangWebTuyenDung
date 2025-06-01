@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng tuyển & Tìm hồ sơ - TalentHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #D2EDFF 0%, #FDFFF3 100%);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: black;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-tab {
+            padding: 10px 20px;
+            background: none;
+            border: 2px solid transparent;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: #7f8c8d;
+        }
+
+        .nav-tab.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Job Posting Section */
+        .job-posting {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            color: #34495e;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #ecf0f1;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .salary-range {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .salary-input {
+            flex: 1;
+        }
+
+        .salary-separator {
+            color: #7f8c8d;
+            font-weight: 600;
+        }
+
+        .skills-input {
+            position: relative;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .skill-remove {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            color: white;
+            border: none;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.4);
+        }
+
+        /* Profile Search Section */
+        .search-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex: 2;
+            padding: 15px 20px;
+            border: 2px solid #ecf0f1;
+            border-radius: 25px;
+            font-size: 16px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.15);
+        }
+
+        .search-filters {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .filter-select {
+            padding: 15px;
+            border: 2px solid #ecf0f1;
+            border-radius: 25px;
+            background: #f8f9fa;
+            font-size: 14px;
+            min-width: 120px;
+        }
+
+        .search-btn {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Profile Cards */
+        .profiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #667eea;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .profile-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .profile-info h3 {
+            color: #2c3e50;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .profile-info p {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .profile-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .profile-skill {
+            background: #ecf0f1;
+            color: #34495e;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+
+        .profile-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 2px;
+        }
+
+        .profile-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .primary-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .secondary-btn {
+            background: #ecf0f1;
+            color: #34495e;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Statistics Dashboard */
+        .stats-dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #4ecdc4);
+        }
+
+        .stat-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            filter: grayscale(0.3);
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .stat-title {
+            color: #7f8c8d;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-tabs {
+                order: -1;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-form {
+                flex-direction: column;
+            }
+
+            .search-filters {
+                justify-content: space-between;
+            }
+
+            .salary-range {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .profiles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-dashboard {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 20px 15px;
+            }
+
+            .job-posting,
+            .search-container {
+                padding: 25px 20px;
+            }
+
+            .stats-dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">TalentHub</a>
+            <div class="nav-tabs">
+                <button class="nav-tab active" onclick="switchTab('posting')">📝 Đăng tuyển</button>
+                <button class="nav-tab" onclick="switchTab('search')">🔍 Tìm hồ sơ</button>
+            </div>
+            <div class="user-menu">
+                <div class="user-avatar">HR</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- Statistics Dashboard -->
+        <div class="stats-dashboard">
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-number">248</div>
+                <div class="stat-title">Tin tuyển dụng</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-number">1,429</div>
+                <div class="stat-title">Ứng viên tiềm năng</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-number">89%</div>
+                <div class="stat-title">Tỷ lệ phù hợp</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-number">4.8</div>
+                <div class="stat-title">Đánh giá trung bình</div>
+            </div>
+        </div>
+
+        <!-- Job Posting Tab -->
+        <div id="posting-tab" class="tab-content active">
+            <div class="job-posting">
+                <div class="section-header">
+                    <h2>📝 Đăng tin tuyển dụng</h2>
+                    <p>Tạo tin tuyển dụng chuyên nghiệp để tìm kiếm ứng viên phù hợp</p>
+                </div>
+
+                <form id="jobForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Tên vị trí tuyển dụng *</label>
+                            <input type="text" placeholder="VD: Senior Frontend Developer" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Công ty</label>
+                            <input type="text" placeholder="Tên công ty">
+                        </div>
+                        <div class="form-group">
+                            <label>Địa điểm làm việc</label>
+                            <select>
+                                <option>Hồ Chí Minh</option>
+                                <option>Hà Nội</option>
+                                <option>Đà Nẵng</option>
+                                <option>Cần Thơ</option>
+                                <option>Remote</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Loại hình công việc</label>
+                            <select>
+                                <option>Full-time</option>
+                                <option>Part-time</option>
+                                <option>Contract</option>
+                                <option>Internship</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Mức lương (VND)</label>
+                            <div class="salary-range">
+                                <input type="number" class="salary-input" placeholder="Từ" min="0">
+                                <span class="salary-separator">-</span>
+                                <input type="number" class="salary-input" placeholder="Đến" min="0">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Kinh nghiệm yêu cầu</label>
+                            <select>
+                                <option>Không yêu cầu</option>
+                                <option>Dưới 1 năm</option>
+                                <option>1-2 năm</option>
+                                <option>3-5 năm</option>
+                                <option>Trên 5 năm</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Kỹ năng yêu cầu</label>
+                            <div class="skills-input">
+                                <input type="text" id="skillInput" placeholder="Nhập kỹ năng và nhấn Enter">
+                                <div class="skills-tags" id="skillsTags"></div>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Mô tả công việc *</label>
+                            <textarea placeholder="Mô tả chi tiết về vị trí, trách nhiệm và yêu cầu công việc..." required></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Quyền lợi</label>
+                            <textarea placeholder="Các quyền lợi và phúc lợi dành cho ứng viên..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        🚀 Đăng tin tuyển dụng
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Profile Search Tab -->
+        <div id="search-tab" class="tab-content">
+            <div class="search-container">
+                <div class="section-header">
+                    <h2>🔍 Tìm kiếm hồ sơ ứng viên</h2>
+                    <p>Khám phá hàng nghìn ứng viên chất lượng phù hợp với yêu cầu</p>
+                </div>
+
+                <div class="search-form">
+                    <input type="text" class="search-input" placeholder="Tìm kiếm theo kỹ năng, kinh nghiệm, vị trí...">
+                    <div class="search-filters">
+                        <select class="filter-select">
+                            <option>Tất cả kinh nghiệm</option>
+                            <option>Dưới 1 năm</option>
+                            <option>1-3 năm</option>
+                            <option>3-5 năm</option>
+                            <option>Trên 5 năm</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>Tất cả địa điểm</option>
+                            <option>TP. Hồ Chí Minh</option>
+                            <option>Hà Nội</option>
+                            <option>Đà Nẵng</option>
+                            <option>Remote</option>
+                        </select>
+                    </div>
+                    <button class="search-btn">🔍 Tìm kiếm</button>
+                </div>
+
+                <div class="profiles-grid" id="profilesGrid">
+                    <!-- Profile cards will be generated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample profiles data
+        const profiles = [
+            {
+                name: "Nguyễn Văn An",
+                title: "Senior Frontend Developer",
+                skills: ["React", "TypeScript", "Node.js", "GraphQL"],
+                experience: "5 năm",
+                location: "TP. Hồ Chí Minh",
+                projects: 12,
+                rating: 4.9
+            },
+            {
+                name: "Trần Thị Bình",
+                title: "UI/UX Designer",
+                skills: ["Figma", "Adobe XD", "Photoshop", "Prototyping"],
+                experience: "3 năm",
+                location: "Hà Nội",
+                projects: 8,
+                rating: 4.7
+            },
+            {
+                name: "Lê Minh Cường",
+                title: "Full Stack Developer",
+                skills: ["Python", "Django", "PostgreSQL", "AWS"],
+                experience: "4 năm",
+                location: "Đà Nẵng",
+                projects: 15,
+                rating: 4.8
+            },
+            {
+                name: "Phạm Thu Dung",
+                title: "Data Scientist",
+                skills: ["Python", "Machine Learning", "TensorFlow", "SQL"],
+                experience: "2 năm",
+                location: "TP. Hồ Chí Minh",
+                projects: 6,
+                rating: 4.6
+            },
+            {
+                name: "Hoàng Văn Đức",
+                title: "DevOps Engineer",
+                skills: ["Docker", "Kubernetes", "AWS", "Jenkins"],
+                experience: "6 năm",
+                location: "Remote",
+                projects: 20,
+                rating: 4.9
+            },
+            {
+                name: "Vũ Thị Hoa",
+                title: "Product Manager",
+                skills: ["Agile", "Scrum", "Analytics", "Strategy"],
+                experience: "4 năm",
+                location: "Hà Nội",
+                projects: 10,
+                rating: 4.8
+            }
+        ];
+
+        let selectedSkills = [];
+
+        // Tab switching
+        function switchTab(tabName) {
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            event.target.classList.add('active');
+            document.getElementById(tabName + '-tab').classList.add('active');
+
+            if (tabName === 'search') {
+                generateProfiles();
+            }
+        }
+
+        // Skills input handling
+        document.getElementById('skillInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const skill = this.value.trim();
+                if (skill && !selectedSkills.includes(skill)) {
+                    selectedSkills.push(skill);
+                    updateSkillsTags();
+                    this.value = '';
+                }
+            }
+        });
+
+        function updateSkillsTags() {
+            const container = document.getElementById('skillsTags');
+            container.innerHTML = '';
+            
+            selectedSkills.forEach((skill, index) => {
+                const tag = document.createElement('div');
+                tag.className = 'skill-tag';
+                tag.innerHTML = `
+                    ${skill}
+                    <button type="button" class="skill-remove" onclick="removeSkill(${index})">×</button>
+                `;
+                container.appendChild(tag);
+            });
+        }
+
+        function removeSkill(index) {
+            selectedSkills.splice(index, 1);
+            updateSkillsTags();
+        }
+
+        // Generate profile cards
+        function generateProfiles() {
+            const container = document.getElementById('profilesGrid');
+            container.innerHTML = '';
+
+            profiles.forEach(profile => {
+                const card = document.createElement('div');
+                card.className = 'profile-card';
+                
+                card.innerHTML = `
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            ${profile.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                        </div>
+                        <div class="profile-info">
+                            <h3>${profile.name}</h3>
+                            <p>${profile.title}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-skills">
+                        ${profile.skills.map(skill => `<span class="profile-skill">${skill}</span>`).join('')}
+                    </div>
+                    
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">${profile.experience}</div>
+                            <div class="stat-label">Kinh nghiệm</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">${profile.projects}</div>
+                            <div class="stat-label">Dự án</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">${profile.rating}</div>
+                            <div class="stat-label">Đánh giá</div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 15px; color: #7f8c8d; font-size: 14px;">
+                        📍 ${profile.location}
+                    </div>
+                    
+                    <div class="profile-actions">
+                        <button class="action-btn primary-btn" onclick="contactProfile('${profile.name}')">
+                            💬 Liên hệ
+                        </button>
+                        <button class="action-btn secondary-btn" onclick="saveProfile('${profile.name}')">
+                            ❤️ Lưu
+                        </button>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+
+        // Profile actions
+        function contactProfile(name) {
+            alert(`Đã gửi lời mời kết nối đến ${name}!`);
+        }
+
+        function saveProfile(name) {
+            alert(`Đã lưu hồ sơ của ${name} vào danh sách yêu thích!`);
+        }
+
+        // Form submission
+        document.getElementById('jobForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = '⏳ Đang đăng tải...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.textContent = '✅ Đăng thành công!';
+                submitBtn.style.background = 'linear-gradient(135deg, #27ae60, #2ecc71)';
+                
+                setTimeout(() => {
+                    alert('🎉 Tin tuyển dụng đã được đăng thành công!\n\nChúng tôi sẽ thông báo khi có ứng viên phù hợp.');
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = 'linear-gradient(135deg, #4ecdc4, #44a08d)';
+                    submitBtn.disabled = false;
+                    this.reset();
+                    selectedSkills = [];
+                    updateSkillsTags();
+                }, 1000);
+            }, 2000);
+        });
+
+        // Initialize profiles on page load
+        generateProfiles();
+    </script>
+</body>
+</html>
